@@ -14,7 +14,7 @@ $ podman build -t ansible-cli:latest .
 
 Run the container
 ```
-$ podman run -tid --name ans-cli --security-opt label=disable --user podman --device /dev/fuse -v my_local_dir:/home/podman:Z ansible-cli:latest 
+$ podman run -tid --name ans-cli --security-opt label=disable --device /dev/fuse -v my_local_dir:/home/podmani/ansible:Z ansible-cli:latest 
 $ podman exec -it ans-cli /bin/bash
 ```
 
