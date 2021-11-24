@@ -1,0 +1,16 @@
+
+---
+ansible-navigator:
+  mode: interactive
+  ansible:
+    inventories:
+    - fitlet
+
+  execution-environment:
+    enabled: true
+    container-engine: podman
+    pull-policy: missing
+    environment-variables:
+      set:
+        ANSIBLE_COLLECTIONS_PATHS: ./collections
+  
