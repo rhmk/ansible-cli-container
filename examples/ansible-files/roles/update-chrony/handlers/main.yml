@@ -1,0 +1,6 @@
+---
+# handlers file for update-chrony
+  - name: restart_chronyd
+    service:
+      name: chronyd
+      state: restarted

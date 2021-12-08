@@ -1,0 +1,3 @@
+---
+# defaults file for update-chrony
+timeserver: 169.254.169.123

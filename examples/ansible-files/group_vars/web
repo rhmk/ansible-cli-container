@@ -1,0 +1,4 @@
+---
+stage: dev
+http_port: 8080
+timeserver: pool.ntp.org

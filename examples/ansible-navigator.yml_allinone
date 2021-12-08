@@ -1,0 +1,9 @@
+---
+ansible-navigator:
+   execution-environment:
+     container-engine: podman
+     enabled: False
+   logging:
+     level: critical
+     append: False
+     file: /home/podman/ansible-navigator.log

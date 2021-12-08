@@ -1,0 +1,20 @@
+---
+- name: webserver setup
+  hosts: web
+  become: yes
+  tasks:
+  - name: webserver installation
+    dnf:
+      name: httpd
+      state: latest
+  - name: ensure webserver is running
+    service:
+      name: httpd
+      enabled: true
+      state: started
+  - name: create or update content
+    copy:
+      src: var/www/html/myindex.html
+      dest: /var/www/html/index.html
+
+  

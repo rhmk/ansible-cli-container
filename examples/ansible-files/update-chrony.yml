@@ -1,0 +1,12 @@
+---
+- name: manage chrony.conf
+  hosts: node1
+  become: yes
+  pre_tasks:
+    - debug:
+        msg: "Start updating chrony"
+  roles:
+    - update-chrony
+  post_tasks:
+    - debug: 
+        msg: "update finished"

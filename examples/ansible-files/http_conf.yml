@@ -1,0 +1,16 @@
+---
+- name: manage httpd.conf
+  hosts: web
+  become: true
+  tasks:
+  - name: Copy Apache configuration file
+    template:
+      src: httpd.conf.j2
+      dest: /etc/httpd/conf/httpd.conf
+    notify:
+      - restart_apache
+  handlers:
+    - name: restart_apache
+      service:
+        name: httpd
+        state: restarted

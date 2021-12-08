@@ -1,0 +1,8 @@
+---
+# tasks file for update-chrony
+- name: Copy chrony configuration file
+  template:
+    src: chrony.conf.j2
+    dest: /etc/chrony.conf
+  notify:
+    - restart_chronyd
