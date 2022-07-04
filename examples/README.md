@@ -60,7 +60,10 @@ displays the installed collections in a runtime which are ready to ansible. Most
 Displays the current configuration of the ansible Command (i.e. runs `ansible-config dump` in the configured runtime)
 
 ### subcommand `doc`
-executes `ansible-doc` in the configured run-time environment. With out `-m stdout` the UI is started and you can browse and scroll through the documentation
+executes `ansible-doc` in the configured run-time environment. With out `-m stdout` the UI is started and you can browse and scroll through the documentation.
+
+**EXAMPLE:**
+`ansible-navigator doc file` : lists the documention of `ansible.builtin.file` module
 
 ### subcommand `run`
 
