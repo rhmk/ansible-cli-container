@@ -10,14 +10,14 @@ pip install --upgrade pip
 pip install ansible ansible-navigator
 ````
 
-[Note]
-====
-example configuration files for ansible-navigator are in the folder `examples`
+*Note* :example configuration files for ansible-navigator are in the folder `examples`
 but not necessary when just runing locally
-====
 
-CleanUp an
 
+## CleanUp virtual python environment & installed collections
+
+- Remove the ansible collection foldes in `${HOME}/ansible/.ansible/collections`
+- Remove the folder with python virtual environment
 
 Inventory Syntax INI Style
 ==========================
