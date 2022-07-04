@@ -4,8 +4,8 @@
 ## Setup Ansible on Linux (non-RHEL) in python venv
 
 ````
-python3 -m venv myansible
-source myansible/bin/activate
+python3 -m venv ~/.venv/myansible
+source ~/.venv/myansible/bin/activate
 pip install --upgrade pip
 pip install ansible ansible-navigator
 ````
@@ -16,8 +16,9 @@ but not necessary when just runing locally
 
 ## CleanUp virtual python environment & installed collections
 
-- Remove the ansible collection foldes in `${HOME}/ansible/.ansible/collections`
-- Remove the folder with python virtual environment
+- leave the virtual environment: `deactivate`
+- Remove the ansible collection folders in `rm ~/.ansible/collections/ansible_collections/*` (careful: this deletes all collections)
+- Remove the folder with python virtual environment `rm -rf ~/.venv/myansible`
 
 ## Inventory Syntax INI Style
 
