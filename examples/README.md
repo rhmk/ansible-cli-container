@@ -3,11 +3,12 @@
 
 ## Setup Ansible on Linux (non-RHEL) in python venv
 
-````dd
+````
 python3 -m venv myansible
 source myansible/bin/activate
 pip install --upgrade pip
 pip install ansible ansible-navigator
+````
 
 [Note]
 ====
@@ -30,5 +31,3 @@ ansible_user=connection_user
 ansible_ssh_pass=password
 ansible_port=22
 ````
-
-
