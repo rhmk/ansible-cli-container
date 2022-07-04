@@ -34,7 +34,8 @@ ansible_port=22
 
 ### generic options
 
-`-m stdout` : do not switch to UI, just print to stdout
+
+`-m stdout` : do not switch to UI, just print to stdout and exit the command. Without this option the UI is started.
 
 ### subscommand `inventory`
 
@@ -48,7 +49,7 @@ ansible_port=22
 
 ### subcommand `collections`
 
-displays the installed collections in an image which are ready to ansible_use
+displays the installed collections in a runtime which are ready to ansible. Most useful in interactive mode.
 
 ### subcommand `images`
 
@@ -59,8 +60,11 @@ displays the installed collections in an image which are ready to ansible_use
 Displays the current configuration of the ansible Command (i.e. runs `ansible-config dump` in the configured runtime)
 
 ### subcommand `doc`
-executes `ansible-doc` in the configured run-time environment
+executes `ansible-doc` in the configured run-time environment. With out `-m stdout` the UI is started and you can browse and scroll through the documentation
 
 ### subcommand `run`
 
- executes `ansible-playbook` in the configured run-time environment
+executes `ansible-playbook` in the configured run-time environment. Command-line options of `ansible-playbook` such as -i, -e, -k etc. can be added
+
+If run in the UI you can browse through the output.
+If you add `-m stdout` the output is identical to running `ansible-playbook` from the command line.
