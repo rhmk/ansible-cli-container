@@ -10,7 +10,7 @@
 #
 FROM quay.io/podman/stable
 
-RUN dnf install -y python3-pip python3-paramiko man-db less 
+RUN dnf install -y python3-pip python3-paramiko man-db less git
 RUN python3 -m pip install ansible ansible-navigator
 RUN mkdir /home/podman/ansible
 ADD https://raw.githubusercontent.com/rhmk/ansible-cli-container/main/ansible-navigator.yml  /home/podman/.ansible-navigator.yml 
