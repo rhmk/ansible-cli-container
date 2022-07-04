@@ -35,10 +35,10 @@ ansible_port=22
 
 ### generic options
 
-
 `-m stdout` : do not switch to UI, just print to stdout and exit the command. Without this option the UI is started.
 
 ### subscommand `inventory`
+
 
  `ansible-navigator inventory` : browse groups and hosts in the UI
 
