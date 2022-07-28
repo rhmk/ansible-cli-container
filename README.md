@@ -18,3 +18,4 @@ $ podman run -tid --name ans-cli --security-opt label=disable --device /dev/fuse
 $ podman exec -it ans-cli /bin/bash
 ```
 
+> **_NOTE:_** if you don't have `podman`, you can replace `podman` by `docker`
